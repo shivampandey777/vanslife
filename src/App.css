@@ -76,6 +76,7 @@ header a:hover {
   text-align: center;
   min-height: 350px;
   background-repeat: no-repeat;
+  background-size: cover;
  
 }
 
@@ -95,17 +96,15 @@ header a:hover {
 .find-btn{
   text-decoration: none;
   text-align: center;
-  width: 500px;
-  height: 50px;
   background-color: #FF8C38;
   color: white;
   font-size: 16px;
   font-weight: 700;
   border-radius: 5px;
   border: none;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 20px ;
+  padding: 10px 0px;
+  margin: 0px 26px;
+  
 }
 .find-btn:hover {
   transform: translate(1px, 1px);
@@ -312,6 +311,7 @@ i[class*='van-type-'] {
 .van-detail h2 {
   font-size: 2rem;
   margin-bottom: 10px;
+  margin-top: 20px;
 }
 
 .van-detail > i {
