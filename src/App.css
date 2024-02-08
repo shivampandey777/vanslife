@@ -4,6 +4,7 @@
 }
 .App {
   text-align: center;
+  
 }
 /****header****/
 .nav{
@@ -73,6 +74,8 @@ header a:hover {
   display: flex;
   flex-direction: column;
   text-align: center;
+  min-height: 350px;
+  background-repeat: no-repeat;
  
 }
 
@@ -80,6 +83,7 @@ header a:hover {
   font-size: 36px;
   padding-top: 65px;
   font-weight: 700;
+  margin-bottom: 22px;
   
 }
 .home > p{
@@ -89,6 +93,7 @@ header a:hover {
 }
 
 .find-btn{
+  text-decoration: none;
   text-align: center;
   width: 500px;
   height: 50px;
@@ -100,6 +105,7 @@ header a:hover {
   border: none;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 20px ;
 }
 .find-btn:hover {
   transform: translate(1px, 1px);
@@ -167,4 +173,109 @@ header a:hover {
   text-decoration: underline;
   transform: translate(1px, 1px);
 }
+/****vans****/
+.van-list-container {
+  padding-inline: 23px;
+  background-color: #FFF7ED;
+  
+}
+.vans{
+  background-color: #FFF7ED;
+  color: #161616;
+  padding-bottom: 55px;
 
+}
+.vans h1{
+  background-color: #FFF7ED;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 23px;
+
+}
+.van-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  gap: 34px;
+}
+.vans p{
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 14px;
+
+}
+.van-tile a {
+  color: #161616;
+  text-decoration: none;    
+}
+
+.van-tile img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.van-list-container button {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.van-type {
+  height: 34px;
+  padding: 6px 26px;
+  font-style: normal;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  background-color: #FFEAD0;
+  color: #4D4D4D;
+  transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.van-type:hover {
+  color: #FFEAD0;
+}
+
+.van-type:focus {
+  outline: none;
+}
+
+.van-type.selected {
+  color: #FFEAD0;
+}
+
+.van-type.simple:hover, .van-type.simple.selected {
+  background-color: #E17654;
+  cursor: pointer;
+ 
+}
+
+.van-type.rugged:hover, .van-type.rugged.selected {
+  background-color: #115E59;
+  cursor: pointer;
+ 
+}
+
+.van-type.luxury:hover, .van-type.luxury.selected {
+  background-color: #161616;
+  cursor: pointer;
+ 
+}
+
+.van-type.clear-filters {
+  margin-left: -20px;
+  height: 34px;
+  padding: 6px 26px;
+  font-style: normal;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  text-decoration: underline;
+  background-color: transparent;
+  color: #4D4D4D;
+}
+
+i[class*='van-type-'] {
+  padding: 7px 14px;
+  margin-top: 10px;
+}

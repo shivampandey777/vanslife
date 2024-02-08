@@ -2,7 +2,10 @@ import React from 'react';
 import './App.css';
 import Home from './Home'
 import About from './About'
+import Van from './Van'
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
+import VanDetail from './VansDetail';
+
 
 function App() {
   return (
@@ -18,6 +21,8 @@ function App() {
          <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} /> 
+          <Route path="/Vans" element={<Van />} /> 
+          <Route path="/Vans/:id" element={<VanDetail />} /> 
         </Routes>
         <footer>
           <h1 className='foot'>Ⓒ2022 #VANLIFE</h1>
