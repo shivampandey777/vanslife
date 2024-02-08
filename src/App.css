@@ -281,16 +281,25 @@ i[class*='van-type-'] {
 /*****van-details*****/
 .van-detail-container {
   padding: 27px;
+  background-color: #FFF7ED;
 }
 
-.van-detail-container .back-button {
-  color: black;
+
+.van-detail-container .back-btn {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
   text-decoration: none;
+  gap: 4px;
+  color: #161616;
+  font-size: 16px;
+  font-weight: 500;
+}
+.back-btn:hover {
+  text-decoration: underline;
 }
 
-.van-detail-container .back-button:visited {
-  
-}
+
 
 .van-detail-container .back-button span {
   text-decoration: underline;

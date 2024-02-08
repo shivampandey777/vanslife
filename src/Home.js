@@ -1,5 +1,4 @@
 import React from "react";
-// import background from './homepage.png';
 import { Link } from "react-router-dom";
 
 
