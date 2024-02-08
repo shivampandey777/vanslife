@@ -2,6 +2,7 @@ import React from "react"
 import { createServer, Model } from "miragejs"
 import { Link } from "react-router-dom"
 
+
 //server to fetch the requested data
 createServer({
     models: {
@@ -60,7 +61,7 @@ export default function Van() {
     ))
 
     return (<div className="vans">
-        <h1>Explore our vans</h1>
+        <h1>Explore our van options</h1>
         <div className="van-list-container"> 
             <div className="van-list">
             
