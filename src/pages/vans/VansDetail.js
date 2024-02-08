@@ -11,7 +11,10 @@ export default function VanDetail(props) {
     }, [params.id])
     return (
         <div className="van-detail-container">
-            <Link to="/Vans" className="back-btn"><p>⬅</p>Back to all vans</Link>
+            <div className="back-btn">
+                <p>⬅</p>
+            <Link to="/Vans" >Back to all vans</Link>
+            </div>
              {van ? (
           <div className="van-detail">
                     <img src={van.imageUrl} alt={van.name} />

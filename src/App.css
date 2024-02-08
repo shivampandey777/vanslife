@@ -285,7 +285,7 @@ i[class*='van-type-'] {
 }
 
 
-.van-detail-container .back-btn {
+.back-btn {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
@@ -296,14 +296,15 @@ i[class*='van-type-'] {
   font-weight: 500;
 }
 .back-btn:hover {
+  text-decoration: none;
+}
+.van-detail-container .back-btn p{
+  text-decoration: none;
+}
+.van-detail-container .back-btn span {
   text-decoration: underline;
 }
 
-
-
-.van-detail-container .back-button span {
-  text-decoration: underline;
-}
 
 .van-detail {
   display: flex;
