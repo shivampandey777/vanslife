@@ -1,10 +1,19 @@
 *{
   padding:0;
   margin:0;
+  box-sizing: border-box;
 }
 .App {
   text-align: center;
-  
+  background-color: #FFF7ED;
+  font-family: "Inter", sans-serif;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 /****header****/
 .nav{
@@ -361,14 +370,11 @@ i[class*='van-type-'] {
 /****host navbar****/
 .host-nav{
   background-color: #FFF7ED;
-  text-decoration: none;
   display: flex;
-  gap: 28px;
 }
 .host-nav a{
   color: #4D4D4D;
   text-decoration: none;
-  font-size: 18px;
   font-weight: 500;
   padding: 5px 20px;
 
@@ -378,7 +384,44 @@ i[class*='van-type-'] {
   color: #161616;
   font-weight: 900px
 }
+/****host vans****/
 
+.host-van-link-wrapper {
+  color: unset;
+  text-decoration: unset;
+  display: flex;
+}
+
+.host-van-link-wrapper > img {
+  height: 70px;
+  border-radius: 5px;
+  margin-right: 17px;
+}
+.host-vans-list {
+  padding-inline: 26px;
+}
+
+.host-vans-title {
+  padding-inline: 26px;
+  background-color: #FFF7ED;
+ padding-bottom: 66px;
+}
+.host-vans-title >h1{
+  padding-top: 55px;
+  margin-bottom: 32px;
+}
+
+.host-van-single {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  margin-bottom: 15px;
+  padding-block: 18px;
+  padding-left: 24px;
+}
+.host-van-info p {
+  margin-block: 10px;
+}
 
 
 
