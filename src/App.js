@@ -9,9 +9,7 @@ import Layout from './component/Layout';
 import Dashboard from './pages/host/DashBoard';
 import Income from './pages/host/Income';
 import Reviews from './pages/host/Reviews';
-
-
-
+import HostLayout from './pages/host/HostLayout';
 
 
 function App() {
@@ -19,14 +17,17 @@ function App() {
     <div>
     <Router>
          <Routes>
-          <Route element={<Layout />}>
-              <Route path="/" element={<Home />} />
-              <Route path="/About" element={<About />} /> 
-              <Route path="/Vans" element={<Van />} /> 
-              <Route path="/Vans/:id" element={<VanDetail />} /> 
-              <Route path="/host" element={<Dashboard />} /> 
-              <Route path="/host/income" element={<Income />} /> 
-              <Route path="/host/reviews" element={<Reviews />} /> 
+          <Route path="/" element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route path="About" element={<About />} /> 
+              <Route path="Vans" element={<Van />} /> 
+              <Route path="Vans/:id" element={<VanDetail />} /> 
+
+              <Route path="host" element={<HostLayout />} > 
+              <Route index element={<Dashboard />} /> 
+              <Route path="income" element={<Income />} /> 
+              <Route path="reviews" element={<Reviews />} /> 
+              </Route>
           </Route>
         </Routes>   
    </Router>

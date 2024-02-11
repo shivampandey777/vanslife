@@ -11,7 +11,11 @@
   background-color: black;
   color: white;
 }
-
+a.my-nav{
+  font-weight: 700;
+  text-decoration: underline;
+  color: #161616;
+}
 header {
   background-color: #FFF7ED;
   min-height: 112px;
@@ -30,16 +34,23 @@ header {
   font-size: 26px;
   font-weight: 900;
 }
+.home-navbar{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  margin-right: 26px;
+
+}
 .aboutLink{
   color: black;
   text-decoration: none;
-  margin-right: 26px;
   font-size: 16px;
 }
 .vansLink{
   color: black;
   text-decoration: none;
-  margin-right: 26px;
   font-size: 16px;
 }
 header a:hover {
@@ -56,8 +67,7 @@ header a:hover {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin: none;
-  padding: none;
+  margin-top: auto;
   background-size: cover;
 }
 .foot > h1{
@@ -172,7 +182,7 @@ header a:hover {
   text-decoration: underline;
   transform: translate(1px, 1px);
 }
-/****vans****/
+/****vans-page****/
 .van-list-container {
   padding-inline: 23px;
   background-color: #FFF7ED;
@@ -348,3 +358,28 @@ i[class*='van-type-'] {
   margin-top: 22px;
 
 }
+/****host navbar****/
+.host-nav{
+  background-color: #FFF7ED;
+  text-decoration: none;
+  display: flex;
+  gap: 28px;
+}
+.host-nav a{
+  color: #4D4D4D;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 5px 20px;
+  margin-left: 26px; 
+}
+.host-nav a:hover {
+  text-decoration: underline;
+  color: #161616;
+  font-weight: 900px
+}
+.host-nav > a:first-of-type {
+  margin-left: -15px;
+}
+
+
