@@ -378,8 +378,11 @@ i[class*='van-type-'] {
   color: #161616;
   font-weight: 900px
 }
-.host-nav > a:first-of-type {
-  margin-left: -15px;
+.host-nav-c {
+  color: #161616;
+  font-weight: 900px;
+  text-decoration: underline;
 }
+
 
 
