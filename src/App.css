@@ -477,7 +477,32 @@ i[class*='van-type-'] {
   color: #161616;
   font-weight: 700;
 }
-
+/****host van id  detail******/
+.host-id-detail{
+  margin-left: 25px;
+  padding-top: 27px;
+  padding-bottom: 25px;
+}
+.host-id-detail p{
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px;
+}
+/******van photos *****/
+.van-photos img{
+  height: 160px;
+  border-radius: 10px;
+  margin-left: 25px;
+  padding: 29px;
+}
+/******van pricing *****/
+.van-pricing{
+  padding-top: 44px;
+  margin-left: 25px;
+  font-size: 24px;
+  font-weight: 500;
+  padding-bottom: 47px;
+}
 
 
 
