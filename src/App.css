@@ -198,7 +198,7 @@ header a:hover {
   padding-inline: 23px;
   background-color: #FFF7ED;
   
-  
+  min-height: 100px;
 }
 
 .vans{

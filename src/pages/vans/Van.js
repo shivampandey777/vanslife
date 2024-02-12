@@ -68,7 +68,7 @@ export default function Van() {
             // window.location.href = `/Vans/${van.id}`;
         }} className="van-tile" >
           <NavLink to={`${van.id}`}
-                state={{ search: searchParams.toString() }}
+                state={{ search: `?${searchParams.toString()}`, type: typeFilter}}
                 aria-label={`View details for ${van.name}, 
                 priced at $${van.price} per day`}
                >
