@@ -1,6 +1,6 @@
 import React from "react"
 import { createServer, Model } from "miragejs"
-import { Link } from "react-router-dom"
+import { Link , useSearchParams} from "react-router-dom"
 
 
 //server to fetch the requested data
@@ -46,14 +46,24 @@ createServer({
 
 
 export default function Van() {
+    
+    const [ searchParams  ] = useSearchParams();
     const [vans, setVans] = React.useState([])
+
     React.useEffect(() => {
         fetch("/api/vans")
-            .then(res => res.json())
-            .then(data => setVans(data.vans)) 
+        .then(res => res.json())
+        .then(data => setVans(data.vans)) 
     }, [])
 
-    const vanElements = vans.map(van => (
+    let typeFilter =  searchParams.get("type")
+    const vanFilter = typeFilter 
+    ? vans.filter(van => van.type.toLowerCase() === typeFilter)
+    : vans
+    console.log(typeFilter)
+
+    
+    const vanElements = vanFilter.map(van => (
         <div  key={van.id} onClick={() => {
             // window.location.href = `/Vans/${van.id}`;
         }} className="van-tile" >
@@ -70,15 +80,21 @@ export default function Van() {
         </Link>
         </div>
     ))
-
-    return (<div className="vans">
+   
+    return (
+    <div className="vans">
         <h1>Explore our van options</h1>
+        <div className="van-list-filter-buttons"> 
+            <Link to="?type=simple" className="van-type simple">Simple</Link>
+            <Link to="?type=luxury" className="van-type luxury" >Luxury</Link>
+            <Link to="?type=rugged" className="van-type rugged" >rugged</Link>
+            <Link to="."  className="van-type clear-filters" >Clear</Link>  
+        </div>
         <div className="van-list-container"> 
-            <div className="van-list">
-            
+            <div  className="van-list">
             {vanElements}
             </div>
         </div>
-        </div>
+    </div>
     )
 }
