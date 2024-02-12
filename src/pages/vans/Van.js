@@ -1,6 +1,6 @@
 import React from "react"
 import { createServer, Model } from "miragejs"
-import { Link , useSearchParams} from "react-router-dom"
+import {  NavLink, useSearchParams} from "react-router-dom"
 
 
 //server to fetch the requested data
@@ -67,7 +67,8 @@ export default function Van() {
         <div  key={van.id} onClick={() => {
             // window.location.href = `/Vans/${van.id}`;
         }} className="van-tile" >
-          <Link to={`/Vans/${van.id}`}
+          <NavLink to={`${van.id}`}
+                state={{ search: searchParams.toString() }}
                 aria-label={`View details for ${van.name}, 
                 priced at $${van.price} per day`}
                >
@@ -77,7 +78,7 @@ export default function Van() {
                 <p>${van.price}/day</p> 
             </div>
             <i className={`van-type ${van.type} selected`}>{van.type}</i>
-        </Link>
+        </NavLink>
         </div>
     ))
     function handleFilterChange(key, value) {
@@ -116,6 +117,7 @@ export default function Van() {
         }
         >Rugged
         </button>
+        {/* navlink doesn't work here to change the url and all of the button are selected at the same time*/ }
         {  typeFilter ? <button
                     onClick={() => handleFilterChange("type", null)}
                     className="van-type clear-filters"

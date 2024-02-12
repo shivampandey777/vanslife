@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function HostVans() { 
     const [vans, setVans] = React.useState([]); 
@@ -13,7 +13,7 @@ export default function HostVans() {
             <div key={van.id} onClick={() => {
                 // window.location.href = `/Vans/${van.id}`;
             }} className="host-van-single">
-                <Link to={`/host/vans/${van.id}`}
+                <NavLink to={`${van.id}`}
                     aria-label={`View details for ${van.name},
                     priced at $${van.price} per day`}
                     className="host-van-link-wrapper"
@@ -23,7 +23,7 @@ export default function HostVans() {
                         <h3>{van.name}</h3>
                         <p>${van.price}/day</p>
                     </div>
-                </Link>
+                </NavLink>
             </div>
         )
     

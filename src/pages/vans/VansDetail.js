@@ -13,7 +13,7 @@ export default function VanDetail(props) {
         <div className="van-detail-container">
             <div className="back-btn">
                 <p>⬅</p>
-            <Link to="/Vans" >Back to all vans</Link>
+            <Link to=".."  relative="path">Back to all vans</Link>
             </div>
              {van ? (
           <div className="van-detail">
