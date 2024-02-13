@@ -513,6 +513,90 @@ i[class*='van-type-'] {
   font-weight: 500;
   padding-bottom: 47px;
 }
+/******page not found *****/
+.notfound{
+  background-color: #FFF7ED;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-align: center;
+  min-height: 80vh;
+}
+.notfound h1{
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 29px;
+}
+.notfound button{
 
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  background-color: #161616;
+  border-radius: 5px;
+  border: none;
+  padding: 16px 55px;
+  margin-left: 26px;
+  margin-right: 26px;
+}
+/****login page****/
+.login-link img{
+    height: 20px;
+    border-radius: 5px;
+}
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFF7ED;
+  min-height: 80vh;
+  padding-top: 50px;
+}
+.login-container h1{
+  margin-bottom: 22px;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;    
+}
+
+.login-form > input {
+  border: 1px solid rgba(209, 213, 219);
+  height: 40px;
+  text-indent: 10px;
+  font-family: "Inter", sans-serif;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  font-weight: 400;
+}
+
+.login-form > input:focus {
+  outline: none;
+}
+
+.login-form > input:first-of-type {
+  border-radius: 6px 6px 0px 0px;
+}
+
+.login-form > input:last-of-type {
+  border-radius: 0px 0px 6px 6px;
+  border-top: none;
+}
+
+.login-form > button {
+  background-color: #FF8C38;
+  border: none;
+  border-radius: 6px;
+  height: 55px;
+  margin-top: 22px;
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+.login-form > button:hover {
+  transform: translate(1px, 1px);
+}
 
 
