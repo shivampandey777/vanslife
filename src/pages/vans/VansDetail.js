@@ -1,15 +1,37 @@
 import React from "react"
 import { useParams , Link, useLocation} from "react-router-dom"
+import { getVans } from "../../api"
 
 export default function VanDetail(props) {
-    const params = useParams()
+    const [loading, setLoading] = React.useState(false)
+    const [error, setError] = React.useState(null)
+    const { id } = useParams()
     const location = useLocation()
     const [van, setVan] = React.useState(null)
+    
     React.useEffect(() => {
-        fetch(`/api/vans/${params.id}`)
-            .then(res => res.json())
-            .then(data => setVan(data.vans))
-    }, [params.id])
+        async function loadVans() {
+            setLoading(true)
+            try {
+                const data = await getVans(id)
+                setVan(data)
+            } catch (err) {
+                setError(err)
+            } finally {
+                setLoading(false)
+            }
+        }
+        loadVans()
+    }, [id])
+
+    if (loading) {
+        return <h1>Loading...</h1>
+    }
+    
+    if (error) {
+        return <h1>There was an error: {error.message}</h1>
+    }
+
     //optional chaining operator before that   "const search = location.state && location.state.search || "" "
     //uselocation is a hook that returns the location object that represents the current URL.
     const search = location.state?.search || ""

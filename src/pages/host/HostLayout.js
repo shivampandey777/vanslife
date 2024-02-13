@@ -6,7 +6,8 @@ export default function HostLayout() {
     fontWeight: "bold",
     textDecoration: "underline",
     color: "#161616"
-}
+    }
+
     return (
         <>
         <nav  className="host-nav">

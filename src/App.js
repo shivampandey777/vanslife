@@ -6,6 +6,7 @@ import Van from './pages/vans/Van'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import VanDetail from './pages/vans/VansDetail';
 import Layout from './component/Layout';
+import AuthRequired from './component/AuthRequired';
 import Dashboard from './pages/host/DashBoard';
 import Income from './pages/host/Income';
 import Reviews from './pages/host/Reviews';
@@ -19,6 +20,7 @@ import NotFound from './pages/NotFound';
 import Login from './pages/Login';
 
 
+
 function App() {
   return (
     <div>
@@ -30,8 +32,8 @@ function App() {
               <Route path="Vans" element={<Van />} /> 
               <Route path="Vans/:id" element={<VanDetail />} /> 
               <Route path="login" element={<Login />} />
-
-              <Route path="host" element={<HostLayout />} > 
+          <Route element={<AuthRequired />}>
+            <Route path="host" element={<HostLayout />} > 
               <Route index element={<Dashboard />} /> 
               <Route path="income" element={<Income />} /> 
               <Route path="reviews" element={<Reviews />} /> 
@@ -40,6 +42,7 @@ function App() {
                 <Route index  element={<HostVanInfo />}/>
                 <Route path="pricing" element={<HostVanPricing/>} />
                 <Route path="photos" element={<HostVanPhotos/>} />
+              </Route>
               </Route>
               </Route>
               <Route path="*" element={<NotFound />} />

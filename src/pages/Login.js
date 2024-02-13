@@ -1,12 +1,33 @@
 import React from "react"
-// import { useNavigate } from "react-router-dom"
+import { useNavigate, useLocation } from "react-router-dom"
+import { loginUser } from "../api"
+
+/**
+ * Challenge: Code the sad path 🙁
+ * 6. Display the error.message below the `h1` if there's ever
+ *    an error in state
+ */
 
 export default function Login() {
     const [loginFormData, setLoginFormData] = React.useState({ email: "", password: "" })
-
+    const [status, setStatus] = React.useState("idle")
+    const [error, setError] = React.useState(null)
+    
+    const location = useLocation()
+    
     function handleSubmit(e) {
         e.preventDefault()
-        console.log(loginFormData)
+        setStatus("submitting")
+        loginUser(loginFormData)
+            .then(data => {
+                console.log(data)
+            })
+            .catch(err => {
+                setError(err)
+            })
+            .finally(() => {
+                setStatus("idle")
+            })
     }
 
     function handleChange(e) {
@@ -19,7 +40,16 @@ export default function Login() {
 
     return (
         <div className="login-container">
+            {
+                location.state?.message &&
+                <h3 className="login-first">{location.state.message}</h3>
+            }
             <h1>Sign in to your account</h1>
+            {
+                error?.message &&
+                <h3 className="login-first">{error.message}</h3>
+            }
+            
             <form onSubmit={handleSubmit} className="login-form">
                 <input
                     name="email"
@@ -35,7 +65,14 @@ export default function Login() {
                     placeholder="Password"
                     value={loginFormData.password}
                 />
-                <button>Log in</button>
+                <button 
+                    disabled={status === "submitting"}
+                >
+                    {status === "submitting" 
+                        ? "Logging in..." 
+                        : "Log in"
+                    }
+                </button>
             </form>
         </div>
     )
