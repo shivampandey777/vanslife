@@ -12,15 +12,19 @@ export default function Login() {
     const [loginFormData, setLoginFormData] = React.useState({ email: "", password: "" })
     const [status, setStatus] = React.useState("idle")
     const [error, setError] = React.useState(null)
-    
+
+    const navigate = useNavigate()
     const location = useLocation()
+    const from = location.state?.from || "/host"
     
     function handleSubmit(e) {
         e.preventDefault()
         setStatus("submitting")
         loginUser(loginFormData)
             .then(data => {
-                console.log(data)
+                setError(null)
+                localStorage.setItem("loggedin", true)
+                   navigate(from , { replace: true})   
             })
             .catch(err => {
                 setError(err)

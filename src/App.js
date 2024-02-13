@@ -7,7 +7,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import VanDetail from './pages/vans/VansDetail';
 import Layout from './component/Layout';
 import AuthRequired from './component/AuthRequired';
-import Dashboard from './pages/host/DashBoard';
 import Income from './pages/host/Income';
 import Reviews from './pages/host/Reviews';
 import HostLayout from './pages/host/HostLayout';
@@ -18,6 +17,7 @@ import HostVanPricing from './pages/host/HostVanPricing';
 import HostVanPhotos from './pages/host/HostVanPhotos';
 import NotFound from './pages/NotFound';
 import Login from './pages/Login';
+import Dashboard from './pages/host/DashBoard';
 
 
 
