@@ -10,14 +10,15 @@ export default function HostVans() {
     React.useEffect(() => {
       async function loadVans() {
             setLoading(true)
-            try {
+            // try {
                 const data = await getHostVans()
                 setVans(data)
-            } catch (err) {
-                setError(err)
-            } finally {
-                setLoading(false)
-            }
+            // } catch (err) {
+                
+            //     setError(err)
+            // } finally {
+            //     setLoading(false)
+            // }
         }
         loadVans()
     }, [])
