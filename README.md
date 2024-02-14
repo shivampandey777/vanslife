@@ -20,19 +20,19 @@ To run VansLife locally, follow these steps:
 
 ##Clone the repository:
 bash
-##git clone https://github.com/your-username/vanslife.git
+### `git clone https://github.com/your-username/vanslife.git`
 
 ##Navigate to the project directory:
 bash
-##cd vanslife
+### `cd vanslife`
 
 ##Install dependencies:
 bash
-##npm install
+### `npm install`
 
 ##Start the development server:
 bash
-##npm start
+### `npm start`
 
 ##Open your web browser and visit http://localhost:3000 to view the application.
 
