@@ -39,6 +39,8 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.23.9",
+    "@babel/preset-env": "^7.23.9",
     "miragejs": "^0.1.48"
   }
 }
