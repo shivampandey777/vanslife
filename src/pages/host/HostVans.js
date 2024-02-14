@@ -4,8 +4,8 @@ import { getHostVans } from "../../api"
 
 export default function HostVans() { 
     const [vans, setVans] = React.useState([]); 
-    const [loading, setLoading] = React.useState(false)
-    const [error, setError] = React.useState(null)
+    // const [loading, setLoading] = React.useState(false)
+    // const [error, setError] = React.useState(null)
 
     React.useEffect(() => {
       async function loadVans() {

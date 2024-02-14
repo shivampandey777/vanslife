@@ -57,7 +57,7 @@ export default function Dashboard() {
             <section className="host-dashboard-reviews">
                 <h2>Review score</h2>
 
-                <BsStarFill className="star" />
+                <BsStarFill className="star" alt="star"/>
 
                 <p>
                     <span>5.0</span>/5
