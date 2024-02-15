@@ -3,15 +3,29 @@
   margin:0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+  margin: 0px ;
+  padding: 0px ;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
 .App {
+  padding:0;
+  margin:0;
   text-align: center;
   background-color: #FFF7ED;
   font-family: "Inter", sans-serif;
 }
 body::-webkit-scrollbar {
   display: none;
+  background-color: #FFF7ED;
 }
 body {
+  padding:0;
+  margin:0;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -388,7 +402,7 @@ i[class*='van-type-'] {
   color: #4D4D4D;
   text-decoration: none;
   font-weight: 500;
-  padding: 5px 20px;
+  padding: 5px 18px;
 
 }
 .host-nav a:hover {
@@ -641,7 +655,9 @@ i[class*='van-type-'] {
   font-size: 16px;
   font-weight: 500;
   text-decoration: none;
-  color: #161616;
+  color: #161616; 
+  align-items: right;
+  padding-right: 9px;
 }
 .dash-view a:hover{
   text-decoration: underline;

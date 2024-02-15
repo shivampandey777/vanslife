@@ -4,9 +4,9 @@ import logo from "./avatar-icon.svg";
 
 export default function Header() {
 
-    function fakeLogOut() {
-        localStorage.removeItem("loggedin")
-    }
+    // function fakeLogOut() {
+    //     localStorage.removeItem("loggedin")
+    // }
     return (
         <div>
             <header>
@@ -30,11 +30,11 @@ export default function Header() {
                     <Link to="login" className="login-link">
                     <img 
                         src={logo}
-                        className="login-icon"
+                       
                         alt="login"
                     />
                     </Link>
-                    <button onClick={fakeLogOut}>X</button>
+                    {/* <button onClick={fakeLogOut}>X</button> */}
                 </nav>
             </header>
         </div>
