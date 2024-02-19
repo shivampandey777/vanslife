@@ -3,7 +3,12 @@ import './App.css';
 import Home from './pages/Home'
 import About from './pages/About'
 import Van from './pages/vans/Van'
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import {
+  Route ,
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
+} from "react-router-dom"
 import VanDetail from './pages/vans/VansDetail';
 import Layout from './component/Layout';
 import AuthRequired from './component/AuthRequired';
@@ -19,13 +24,7 @@ import NotFound from './pages/NotFound';
 import Login from './pages/Login';
 import Dashboard from './pages/host/DashBoard';
 
-
-
-function App() {
-  return (
-    <div>
-    <Router>
-         <Routes>
+const router = createBrowserRouter(createRoutesFromElements(
           <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
               <Route path="About" element={<About />} /> 
@@ -47,9 +46,13 @@ function App() {
               </Route>
               <Route path="*" element={<NotFound />} />
           </Route>
-        </Routes>   
-   </Router>
 
+))
+
+function App() {
+  return (
+    <div>
+    <RouterProvider router={router} />
     </div>
   );
 }
